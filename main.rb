@@ -5,8 +5,6 @@ require 'open-uri'
 
 include ERB::Util
 
-set :public_folder, 'public'
-
 get '/' do
 	#if someone know why i need to use this randomshit EXPLAIN me i don't get it O.o
 	happyFeed = getFeed("http://thecolorsofart.tumblr.com/rss?" + Random.rand(20).to_s)
