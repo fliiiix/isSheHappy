@@ -25,9 +25,5 @@ get '/' do
 end
 
 def getFeed(url)
-	rss_content = ""
-	open(url) do |f|
-		rss_content = f.read
-	end
-	return rss_content
+	open(url).read
 end
